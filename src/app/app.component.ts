@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'bytebank';
   transferencia: any;
 
-  transferir($event) {
+  transferir($event: any) {
     console.log($event);
     this.transferencia = $event;
   }
