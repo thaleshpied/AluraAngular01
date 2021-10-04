@@ -12,9 +12,13 @@ export class NovaTransferenciaComponent {
   valor: number = 0;
   destino: number = 1;
 
+  constructor (private service: TransferenciaService){
+
+  }
+
   transferir() {
     console.log('Solicitada nova transferência');
-    const valorEmitir = { valor: this.valor, destino: this.destino };
-    this.aoTranferir.emit(valorEmitir);
-  }
+    const valorEmitir = Transferencia = { valor: this.valor, destino: this.destino };
+    this.service.adicionar(valoEmitir).subscribe(resultado=>{ console.log(resultado);
+  });
 }
